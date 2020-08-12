@@ -7,6 +7,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="JWBD-EXAM_CGMD001521_TranCongMinh" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="javax.annotation" />
+          <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
+        </element>
       </element>
     </root>
   </artifact>

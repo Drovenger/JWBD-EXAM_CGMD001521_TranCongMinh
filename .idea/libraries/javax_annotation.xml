@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="javax.annotation">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/javax.annotation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/javax.ejb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/javax.jms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/javax.persistence.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/javax.resource.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/javax.servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/javax.servlet.jsp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/javax.transaction.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/jstl-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../case-study-03/lib/mysql-connector-java-8.0.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
