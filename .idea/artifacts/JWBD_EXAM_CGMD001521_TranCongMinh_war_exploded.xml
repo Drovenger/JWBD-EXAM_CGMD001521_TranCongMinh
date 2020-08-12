@@ -10,6 +10,8 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="javax.annotation" />
           <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
+          <element id="library" level="module" name="JUnit4" module-name="JWBD-EXAM_CGMD001521_TranCongMinh" />
+          <element id="library" level="module" name="JUnit5.4" module-name="JWBD-EXAM_CGMD001521_TranCongMinh" />
         </element>
       </element>
     </root>

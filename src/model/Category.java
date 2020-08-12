@@ -4,11 +4,16 @@ public class Category {
     private int id;
     private String category_name;
 
-    public Category() {
+    public Category(){
+
     }
 
-    public Category(int id, String category_name) {
+    public Category(int id, String category_name){
         this.id = id;
+        this.category_name = category_name;
+    }
+
+    public Category(String category_name){
         this.category_name = category_name;
     }
 

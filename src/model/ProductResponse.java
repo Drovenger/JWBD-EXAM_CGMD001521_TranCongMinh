@@ -1,51 +1,23 @@
 package model;
 
-public class Product {
+public class ProductResponse {
     private int id;
     private String product_name;
-    private Integer price;
-    private Integer quantity;
+    private int price;
+    private int quantity;
     private String color;
     private String description;
-    private int categoryId;
+    private String categoryName;
 
-    public Product(){
-
-    }
-
-    public Integer getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public Product(int id, String product_name, int price, int quantity, String color, String description, String category_name){
+    public ProductResponse(int id, String product_name, int price, int quantity, String color, String description,
+                           String categoryName) {
         this.id = id;
         this.product_name = product_name;
         this.price = price;
         this.quantity = quantity;
         this.color = color;
         this.description = description;
-
-    }
-
-    public Product(String product_name, int price, int quantity, String color, String description, String category_name){
-        this.product_name = product_name;
-        this.price = price;
-        this.quantity = quantity;
-        this.color = color;
-        this.description = description;
-
-    }
-
-    public Product(String product_name, int price, int quantity, String color, String description){
-        this.product_name = product_name;
-        this.price = price;
-        this.quantity = quantity;
-        this.color = color;
-        this.description = description;
+        this.categoryName = categoryName;
     }
 
     public int getId() {
@@ -94,5 +66,13 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }
