@@ -28,8 +28,12 @@ public class ProductServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         String action = request.getParameter("action");
 
+        if (action == null) {
+            action = "";
+        }
+
         try {
-            switch (action != null ? action : "") {
+            switch (action) {
                 case "createProduct":
                     createProduct(request, response);
                     break;
@@ -53,8 +57,12 @@ public class ProductServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+
         try {
-            switch (action != null ? action : "") {
+            switch (action) {
                 case "createProduct":
                     showCreateForm(request, response);
                     break;
@@ -63,6 +71,9 @@ public class ProductServlet extends HttpServlet {
                     break;
                 case "deleteProduct":
                     showRemoveForm(request, response);
+                    break;
+                case "searchProduct":
+                    searchProductByName(request, response);
                     break;
                 default:
                     listProduct(request, response);
@@ -109,11 +120,11 @@ public class ProductServlet extends HttpServlet {
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         String color = request.getParameter("color");
         String description = request.getParameter("description");
-        String categoryName = request.getParameter("categoryName");
+        int id_category = Integer.parseInt(request.getParameter("categoryName"));
 
-        Product product = new Product(name, price, quantity, color, description);
-        Category category = new Category(categoryName);
-        productService.insertProduct(product, category);
+        Product product = new Product(name, price, quantity, color, description, id_category);
+//        Category category = new Category(categoryName);
+        productService.insertProduct(product);
         listProduct(request, response);
     }
 
@@ -137,14 +148,12 @@ public class ProductServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
+
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/edit.jsp");
         requestDispatcher.forward(request, response);
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
-        List<Category> categories = categoryService.findAll();
-        request.setAttribute("categories", categories);
-
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/create.jsp");
         requestDispatcher.forward(request, response);
     }

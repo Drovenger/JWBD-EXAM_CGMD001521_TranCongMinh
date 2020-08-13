@@ -12,7 +12,7 @@ public interface IProduct {
 
     Product selectProduct(int id) throws SQLException;
 
-    void insertProduct(Product product, Category category) throws SQLException;
+    void insertProduct(Product product) throws SQLException;
 
     boolean updateProduct(Product product, Category category) throws SQLException;
 

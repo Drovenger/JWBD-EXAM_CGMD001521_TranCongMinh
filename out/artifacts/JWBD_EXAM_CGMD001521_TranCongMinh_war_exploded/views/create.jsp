@@ -35,16 +35,13 @@
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <input type="text" placeholder="Enter Description Here.." class="form-control" name="description">
+                        <input type="text" placeholder="Enter Description Here.." class="form-control"
+                               name="description">
                     </div>
                     <div class="form-group">
                         <label>Category</label>
-
-                        <select class="custom-select" name="categoryName">
-                            <c:forEach items='${requestScope["categories"]}' var="category">
-                                <option>${category.getCategory_name()}</option>
-                            </c:forEach>
-                        </select>
+                        <input type="text" class="form-control"
+                               name="categoryName">
                     </div>
                     <button type="submit" class="btn btn-lg btn-info">Submit</button>
                 </div>

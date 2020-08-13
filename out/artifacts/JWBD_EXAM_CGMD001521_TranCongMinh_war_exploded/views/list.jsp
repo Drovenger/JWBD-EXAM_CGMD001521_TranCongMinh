@@ -32,13 +32,13 @@
             </thead>
             <c:forEach items="${list}" var="list">
                 <tr>
-                    <td><c:out value="${list.getId}"/> </td>
-                    <td><c:out value="${list.getProduct_name}"/></td>
-                    <td><c:out value="${list.getPrice}"/> </td>
-                    <td><c:out value="${list.getQuantity}"/> </td>
-                    <td><c:out value="${list.getColor}"/> </td>
-                    <td><c:out value="${list.getCategoryName}"/> </td>
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="/product?action=updateProduct&id=${list.id}"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                    <td><c:out value="${list.getId()}"/> </td>
+                    <td><c:out value="${list.getProduct_name()}"/></td>
+                    <td><c:out value="${list.getPrice()}"/> </td>
+                    <td><c:out value="${list.getQuantity()}"/> </td>
+                    <td><c:out value="${list.getColor()}"/> </td>
+                    <td><c:out value="${list.getCategoryName()}"/> </td>
+                    <td class="text-center"><a class='btn btn-info btn-xs' href="/product?action=editProduct&id=${list.id}"><span class="glyphicon glyphicon-edit"></span> Edit</a>
                         <a href="/product?action=deleteProduct&id=${list.id}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
                 </tr>
             </c:forEach>

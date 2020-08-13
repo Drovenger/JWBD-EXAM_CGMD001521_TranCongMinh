@@ -63,7 +63,7 @@ public class ProductImpl implements IProduct {
             int quantity = resultSet.getInt("quantity");
             String color = resultSet.getString("color");
             String des = resultSet.getString("description");
-            String category = resultSet.getString("category");
+            int category = resultSet.getInt("category");
 
             product = new Product(name, price, quantity, color, des, category);
         }
